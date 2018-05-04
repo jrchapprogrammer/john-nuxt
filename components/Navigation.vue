@@ -1,21 +1,30 @@
 <template>
-    <nav>
-        <nuxt-link to="/About">
-            <li>About</li>
-        </nuxt-link>
-        <nuxt-link to="/Work">
-            <li>Work</li>
-        </nuxt-link>
-        <nuxt-link to="/Contact">
-            <li>Contact</li>
-        </nuxt-link>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">John Chappelle III</a>
+        <button class="button navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
+          <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
+          <nuxt-link class="navbar-item" to="/projects">Projects</nuxt-link>
+          <nuxt-link class="navbar-item" to="/contact">Contact</nuxt-link>
+        </div>
+      </div>
     </nav>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'Navigation'
-    }
+export default {
+  name: "Navigation"
+};
 </script>
 
 <style scoped>
