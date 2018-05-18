@@ -4,7 +4,6 @@
             <a :href="repo.html_url" target="_blank">
                 <h2 class="isLarge">{{ repo.name }}</h2>
             </a>
-            <p><strong>{{ repo.owner.login }}</strong></p>
             <p>{{ repo.created_at }}</p>
             <p>{{ repo.description }}</p>
         </li>
