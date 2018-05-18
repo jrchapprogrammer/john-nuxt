@@ -1,23 +1,20 @@
 <template>
     <div>
-        <!-- iterates over Github repos and outputs select repo data -->
-        <ul v-if="projects && projects.length">
-            <li v-for="project of projects" :key="project">
-                <a :href="url" target="_blank">
-                    <h2>{{ repoName }}</h2>
-                </a>
-                <p><strong>{{ owner }}</strong></p>
-                <p>{{ made }}</p>
-                <p>{{ description }}</p>
-            </li>
-        </ul>
+        <li>
+            <a :href="repo.url" target="_blank">
+                <h2 class="isLarge">{{ repo.name }}</h2>
+            </a>
+            <p><strong>{{ repo.owner.login }}</strong></p>
+            <p>{{ repo.deployments_url.created_url }}</p>
+            <p>{{ repo.description }}</p>
+        </li>
     </div>
 </template>
 
 <script>
 export default {
   name: "GitRepo",
-  props: ["url", "repoName", "owner", "made", "description"]
+  props: ["repo"]
 };
 </script>
 
